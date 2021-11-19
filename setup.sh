@@ -203,7 +203,7 @@ EOF
 chmod +x /usr/local/bin/firefox
 
 # Software for programming
-apt install -y git g++ default-jdk python3-pip gdb strace
+apt install -y git openssh-client g++ default-jdk python3-pip gdb strace
 
 # Password manager
 apt install -y python3-gpg xsel
