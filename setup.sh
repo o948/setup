@@ -9,6 +9,9 @@ echo 'blacklist pcspkr' >/etc/modprobe.d/nobeep.conf
 # No unnecessary packages
 echo 'apt::install-recommends "false";' >/etc/apt/apt.conf.d/no-recommends.conf
 
+# Update SSL certificates
+apt install -y ca-certificates
+
 # Latest kernel
 source /etc/os-release
 apt install -y -t "${VERSION_CODENAME}-backports" linux-image-amd64 firmware-linux
