@@ -65,7 +65,7 @@ cat >/etc/X11/xinit/.Xresources <<EOF
 XTerm*background: black
 XTerm*foreground: white
 XTerm*faceName: monospace
-XTerm*faceSize: 9
+XTerm*faceSize: 10
 XTerm*VT100.translations: #override \
   Ctrl Shift <Key>C: copy-selection(CLIPBOARD, PRIMARY)
 EOF
