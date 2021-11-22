@@ -17,7 +17,7 @@ source /etc/os-release
 apt install -y -t "${VERSION_CODENAME}-backports" linux-image-amd64 firmware-linux
 
 # X server
-apt install -y xserver-xorg xinit libpam-systemd
+apt install -y xserver-xorg xinit libpam-systemd x11-utils
 
 # Things for building window manager
 apt install -y wget unzip make g++ libx11-dev libxft-dev
