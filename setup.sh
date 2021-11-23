@@ -187,7 +187,7 @@ apt install -y man-db bash-completion mc vim htop wget
 update-alternatives --set editor /usr/bin/vim.basic
 
 # Software for media files
-apt install -y moc mplayer feh evince gimp
+apt install -y moc mplayer feh evince gimp ffmpeg
 # Fix mplayer audio pitch when changing playback speed
 cat >/etc/mplayer/mplayer.conf <<EOF
 af=scaletempo
