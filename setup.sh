@@ -104,6 +104,14 @@ Section "InputClass"
 EndSection
 EOF
 
+# Allow multiple processes to use one sound card
+cat >/etc/asound.conf <<EOF
+pcm.!default {
+  type plug
+  slave.pcm "dmix"
+}
+EOF
+
 # Make function keys work
 apt install -y alsa-utils acpi-support
 # Volume keys
