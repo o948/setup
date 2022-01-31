@@ -104,12 +104,20 @@ Section "InputClass"
 EndSection
 EOF
 
-# Allow multiple processes to use one sound card
+# Allow multiple processes to use one sound card and specify mic (arecord -l to see available)
 cat >/etc/asound.conf <<EOF
 pcm.!default {
-  type plug
-  slave.pcm "dmix"
+  type asym
+  playback.pcm {
+    type plug
+    slave.pcm "dmix"
+  }
+  capture.pcm {
+    type plug
+    slave.pcm "hw:0,0"
+  }
 }
+
 EOF
 
 # Make function keys work
