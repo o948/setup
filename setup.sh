@@ -198,7 +198,7 @@ service acpid start
 apt install -y udisks2 jmtpfs libblockdev-crypto2
 
 # Useful command line tools
-apt install -y man-db bash-completion mc vim htop wget
+apt install -y man-db bash-completion mc file vim htop wget
 # Make vim the default editor
 update-alternatives --set editor /usr/bin/vim.basic
 
