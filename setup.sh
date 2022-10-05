@@ -208,6 +208,8 @@ apt install -y moc mplayer feh evince gimp ffmpeg
 cat >/etc/mplayer/mplayer.conf <<EOF
 af=scaletempo
 EOF
+# Open pdfs with evince by default
+su -c 'xdg-mime default org.gnome.Evince.desktop application/pdf' $(logname)
 
 # Software for the Internet
 apt install -y transmission-gtk firefox-esr apulse
