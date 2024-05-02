@@ -194,6 +194,9 @@ fi
 systemctl enable acpid
 service acpid start
 
+# Auto-update time
+apt install ntp
+
 # Services for mounting storage and MTP devices
 apt install -y udisks2 jmtpfs libblockdev-crypto2
 
